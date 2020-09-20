@@ -1,26 +1,26 @@
 # README
+Welcome to my Cape Cod Beaches App!
 
-Link to [frontend](https://github.com/hkristin/cape_cod_beaches_frontend)
+About
+This is a single-page application that renders and displays content with Javascript through the frontend and manages local API data via Rails (backend).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users can create and delete beaches that belong to the 15 towns of Cape Cod, Massachussetts.
+(Link to [frontend](https://github.com/hkristin/cape_cod_beaches_frontend))
 
-Things you may want to cover:
+Usage 
 
-* Ruby version
+1.) Fork/ clone this repo to your local machine; cd into the project.
+2.) Backend
+    i. cd into cape_cod_beaches_backend
+    ii. run bundle install to install gem dependencies
+    iii. run rails db:migrate to migrate model data to DB
+    iv. run rails db:seed to implement default seed data. 
+    (run rails c to ensure the data was seeded correctly)
+    v. run rails s to start the server
 
-* System dependencies
+3.) Frontend
+    i. run open index.html in your editor (the web page should automatically load a browser)
 
-* Configuration
+License
+This app is available as open source under the terms of the MIT License.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
