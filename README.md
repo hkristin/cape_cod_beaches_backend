@@ -1,5 +1,7 @@
 # README
 
+Link to [frontend](https://github.com/hkristin/cape_cod_beaches_frontend)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
