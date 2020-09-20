@@ -4,7 +4,6 @@ class BeachesController < ApplicationController
   # GET /beaches
   def index
     @beaches = Beach.all
-
     render json: @beaches
   end
 
@@ -16,7 +15,6 @@ class BeachesController < ApplicationController
   # POST /beaches
   def create
     @beach = Beach.new(beach_params)
-
     if @beach.save
       render json: @beach, status: :created, location: @beach
     else
@@ -46,6 +44,6 @@ class BeachesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def beach_params
-      params.require(:beach).permit(:name, :location, :town_id)
+      params.require(:beach).permit(:name, :length_of_beach, :image, :town_id)
     end
 end

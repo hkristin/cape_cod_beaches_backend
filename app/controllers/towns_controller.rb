@@ -4,7 +4,6 @@ class TownsController < ApplicationController
   # GET /towns
   def index
     @towns = Town.all
-
     render json: @towns.as_json(include: {beaches: {only: [:id, :name, :length_of_beach]}})
   end
 
