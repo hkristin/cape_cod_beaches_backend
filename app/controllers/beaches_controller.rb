@@ -4,7 +4,7 @@ class BeachesController < ApplicationController
   # GET /beaches
   def index
     @beaches = Beach.all
-    render json: @beaches
+    render json: @beaches, include: [:town]
   end
 
   # GET /beaches/1
@@ -16,7 +16,7 @@ class BeachesController < ApplicationController
   def create
     @beach = Beach.new(beach_params)
     if @beach.save
-      render json: @beach, status: :created, location: @beach
+      render json: @beach.as_json(include: {town: {only: :name}})
     else
       render json: @beach.errors, status: :unprocessable_entity
     end
